@@ -26,5 +26,18 @@ namespace ProjetoWebAsp.Controllers
         {
             return View();
         }
+
+        public ActionResult Create()//carregar formulario
+        {
+            return View();
+
+
+        }
+        [HttpPost]
+
+        public ActionResult Create (Categoria categoria)
+        {
+            return View(categoria);//recebendo o objeto inteiro
+        }
     }
 }
