@@ -29,7 +29,7 @@ namespace ProjetoWebAsp.Controllers
 
         public ActionResult Create()//carregar formulario
         {
-            return View();
+            return View(); //criar objeto no banco 
 
 
         }
@@ -37,7 +37,7 @@ namespace ProjetoWebAsp.Controllers
 
         public ActionResult Create (Categoria categoria)
         {
-            return View(categoria);//recebendo o objeto inteiro
+            return View(categoria);//recebendo o objeto inteiro retorno
         }
     }
 }
