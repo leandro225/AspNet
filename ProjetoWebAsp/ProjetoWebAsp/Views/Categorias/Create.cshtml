@@ -1,12 +1,46 @@
-﻿
+﻿@model ProjetoWebAsp.Models.Categoria
+
+@*objeto q vai navegar nessa tela*@
+
+
 @{
     ViewBag.Title = "Create";
 }
 
 <h2>Create</h2>
 
-@using (Html.BeginForm())//create
- {
+@using (Html.BeginForm())//create  // manda uma categoria
+{
+    @*Formulario v1 (usando model)
+        @Html.TextBoxFor(m => m.Nome)
+        <br />
+        <br />
+        @Html.CheckBoxFor(m => m.Ativo)// REFLETE EM OURA CATEGORIA
+        <br />
+        <br />*@
 
 
- }
+    @Html.DisplayNameFor(m => m.Nome)
+    @Html.EditorFor(m => m.Nome)
+    <br />
+    <br />
+
+
+
+   // @Html.Editorfor(m => m.Nome)
+   // <br />
+   // <br />
+   //  @Html.Editorfor(m => m.Ativo)
+   // <br />
+   //<br />
+
+    //formulario v3 usando model formcompleto
+    //@Html.EditorForModel()
+
+
+
+
+
+    <input type="submit" value="Salvar" />
+
+}
