@@ -9,6 +9,7 @@ namespace ProjetoWebAsp.Controllers
         // GET: Categorias
         public ActionResult Index()
         {
+
            
 
            
@@ -37,7 +38,31 @@ namespace ProjetoWebAsp.Controllers
 
         public ActionResult Create (Categoria categoria)
         {
+
+            if ( ModelState.IsValid){//para campos de validacao por exemplo
+                //salvar no banco
+            }
             return View(categoria);//recebendo o objeto inteiro retorno
+        }
+
+        public ActionResult Index2()
+        {
+            List<Categoria> categorias = new List<Categoria>();
+
+            categorias.Add(
+                new Categoria()
+                {
+
+                    Nome = "Casa"
+                }
+
+                );
+            
+            categorias.Add(new Categoria() { Nome = "Carro" });
+            categorias.Add(new Categoria() { Nome = "Trabalho" });
+            categorias.Add(new Categoria() { Nome = "Família" });
+
+            return View(categorias);
         }
     }
 }
