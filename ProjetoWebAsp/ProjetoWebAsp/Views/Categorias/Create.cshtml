@@ -7,7 +7,7 @@
     ViewBag.Title = "Create";
 }
 
- <h2>Create</h2>
+<h2>Create</h2>
 
 @using (Html.BeginForm())//create  // manda uma categoria
 {
@@ -26,22 +26,18 @@
     <br />
     <br />
 
+    @Html.Editorfor(m => m.Nome)
+    @Html.Editorfor(m => m.Ativo)
+    <br />
+    <br />
+
+    //formulario v3 usando model formcompleto
+    //@Html.EditorForModel()
 
 
-   // @Html.Editorfor(m => m.Nome)
-   // <br />
-   // <br />
-   //  @Html.Editorfor(m => m.Ativo)
-   // <br />
-   //<br />
-
-   //formulario v3 usando model formcompleto
-   //@Html.EditorForModel()
-
-
-   <input type="submit" value="Salvar" />
+    <input type="submit" value="Salvar" />
 
 }
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-    }
+}
