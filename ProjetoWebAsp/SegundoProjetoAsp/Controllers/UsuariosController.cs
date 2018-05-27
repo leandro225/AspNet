@@ -9,7 +9,7 @@ namespace SegundoProjetoAsp.Controllers
 {
     public class UsuariosController : Controller
     {
-        // GET: Usuario
+        // GET: Usuarios
         public ActionResult Index()
         {
             MeuContexto contexto = new MeuContexto();
@@ -17,6 +17,7 @@ namespace SegundoProjetoAsp.Controllers
 
             return View(usuarios);
         }
+
         // GET
         public ActionResult Create()
         {

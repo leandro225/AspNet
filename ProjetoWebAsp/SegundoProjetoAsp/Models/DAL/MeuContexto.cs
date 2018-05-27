@@ -14,7 +14,7 @@ namespace SegundoProjetoAsp.Models.DAL
             //Migrations (pra produção)
 
 
-            Database.SetInitializer<MeuContexto>(new DropCreateDatabaseIfModelChanges<MeuContexto>());
+            Database.SetInitializer<MeuContexto>(new DropCreateDatabaseAlways<MeuContexto>());
         }
 
 
